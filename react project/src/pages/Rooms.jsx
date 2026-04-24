@@ -32,7 +32,7 @@ function Rooms() {
   ]);
 
   const fetchRooms = async () => {
-    const res = await axios.get("http://localhost:5000/api/rooms");
+    const res = await axios.get("https://hotel-management-system-2mqi.onrender.com/api/rooms");
     setRooms(res.data);
   };
 
@@ -164,7 +164,7 @@ function Rooms() {
             bookingId: Math.floor(Math.random() * 10000),
           };
 
-          await axios.post("http://localhost:5000/api/rooms", data);
+          await axios.post("https://hotel-management-system-2mqi.onrender.com/api/rooms", data);
         }
 
         alert("Multiple Rooms Booked Successfully!");
@@ -195,7 +195,7 @@ function Rooms() {
           status: "Booked",
         };
 
-        await axios.post("http://localhost:5000/api/rooms", data);
+        await axios.post("https://hotel-management-system-2mqi.onrender.com/api/rooms", data);
         alert("Room Booked Successfully!");
       }
 

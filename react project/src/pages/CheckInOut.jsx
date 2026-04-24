@@ -16,7 +16,7 @@ function CheckInOut() {
 
   // FETCH BOOKINGS
   const fetchBookings = async () => {
-    const res = await axios.get("http://localhost:5000/api/bookings");
+    const res = await axios.get("https://hotel-management-system-2mqi.onrender.com/api/bookings");
     setBookings(res.data);
   };
 
@@ -34,7 +34,7 @@ function CheckInOut() {
     }
 
     try {
-      const res = await axios.get("http://localhost:5000/api/rooms");
+      const res = await axios.get("https://hotel-management-system-2mqi.onrender.com/api/rooms");
 
       const rooms = res.data.filter(
         r =>
@@ -76,7 +76,7 @@ function CheckInOut() {
     if (isAlreadyCheckedOut(data)) return;
 
     try {
-      await axios.post("http://localhost:5000/api/bookings/checkin", {
+      await axios.post("https://hotel-management-system-2mqi.onrender.com/api/bookings/checkin", {
         ...data,
         checkIn: new Date().toLocaleString(),
         status: "Checked-In"
@@ -101,7 +101,7 @@ function CheckInOut() {
   // CHECK-OUT
   const handleCheckOut = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/bookings/checkout/${id}`);
+      await axios.put(d`https://hotel-management-system-2mqi.onrender.com/api/bookings/checkout/.../${i}`);
       fetchBookings();
     } catch (err) {
       console.log(err);
