@@ -34,7 +34,7 @@ function Login() {
 
     try {
       const res = await axios.post(
-        "http://"https://hotel-management-system-2mqi.onrender.com/api/auth/login"/api/auth/login",
+        "https://hotel-management-system-2mqi.onrender.com/api/auth/login",
         data
       );
       alert(res.data.message);
